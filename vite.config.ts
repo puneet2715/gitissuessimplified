@@ -3,10 +3,11 @@ import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/gitissuessimplified",
   plugins: [react()],
   resolve: {
     alias: {
-      'node-fetch': 'isomorphic-fetch',
-    }
+      "node-fetch": "isomorphic-fetch",
+    },
   },
 });
