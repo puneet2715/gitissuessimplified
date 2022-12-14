@@ -1,6 +1,6 @@
 import React, { FC, Suspense } from "react";
 import { Layout, Spin } from "antd";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import "antd/dist/reset.css";
 
 const { Header, Content } = Layout;
@@ -25,12 +25,12 @@ const App: FC = () => (
         }}
       >
         <Suspense fallback={<Spin />}>
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route index path="/" element={<IssuesList />} />
               <Route path="/issues/:issue_number" element={<IssueDetails />} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </Suspense>
       </Content>
     </Layout>
