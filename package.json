@@ -2,6 +2,7 @@
   "name": "gitissues",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://puneet2715.github.io/gitissuessimplified",
   "type": "module",
   "scripts": {
     "dev": "vite",
