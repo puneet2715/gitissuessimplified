@@ -27,7 +27,7 @@ const App: FC = () => (
         <Suspense fallback={<Spin />}>
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<IssuesList />} />
+              <Route index path="/" element={<IssuesList />} />
               <Route path="/issues/:issue_number" element={<IssueDetails />} />
             </Routes>
           </BrowserRouter>
