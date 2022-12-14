@@ -1,0 +1,13 @@
+.App {
+  min-height: 100vh;
+}
+
+.ant-layout-header,
+.ant-layout-footer {
+  color: #fff !important;
+  background: #7dbcea;
+}
+.ant-layout-content {
+  min-height: 120px;
+  color: #fff;
+}
