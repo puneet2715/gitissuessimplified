@@ -11,7 +11,7 @@ export default function IssueDetails() {
   return (
     <div style={{ maxWidth: "1200px", minWidth: "400px", overflowX: "auto" }}>
       <Button style={{ margin: "20px 20px 20px 0" }}>
-        <Link to="/issues">Back to Issues List</Link>
+        <Link to="/">Back to Issues List</Link>
       </Button>
 
       <Card>

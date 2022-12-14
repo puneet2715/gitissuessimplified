@@ -1,11 +1,11 @@
-import { FC, Suspense } from "react";
-import IssuesList from "./components/IssuesList";
+import React, { FC, Suspense } from "react";
 import { Layout, Spin } from "antd";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "antd/dist/reset.css";
-import IssueDetails from "./components/IssueDetails";
 
 const { Header, Content } = Layout;
+const IssuesList = React.lazy(() => import("./components/IssuesList"));
+const IssueDetails = React.lazy(() => import("./components/IssueDetails"));
 
 const App: FC = () => (
   <div className="App">
@@ -28,7 +28,6 @@ const App: FC = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<IssuesList />} />
-              <Route path="/issues" element={<IssuesList />} />
               <Route path="/issues/:issue_number" element={<IssueDetails />} />
             </Routes>
           </BrowserRouter>
