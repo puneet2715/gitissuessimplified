@@ -20,8 +20,10 @@ export default function IssueCard({ issue }: { issue: Issue }) {
       extra={
         <Tooltip title="Go to Profile" placement="right">
           <Avatar
+            style={{ cursor: "pointer" }}
             size={32}
-            icon={<img src={issue.user?.avatar_url} alt="avatar" />}
+            src={issue.user?.avatar_url}
+            alt="user avatar"
             onClick={() => window.open(issue.user?.html_url ?? "", "_blank")}
           />
         </Tooltip>
