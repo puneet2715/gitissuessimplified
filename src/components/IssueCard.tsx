@@ -1,5 +1,5 @@
 import ReactMD from "react-markdown";
-import { Card, Avatar, Tag, Button, Space, Badge } from "antd";
+import { Card, Avatar, Tag, Button, Space, Tooltip } from "antd";
 import { Issue } from "../types/issue";
 // import {
 //   EditOutlined,
@@ -18,11 +18,13 @@ export default function IssueCard({ issue }: { issue: Issue }) {
       title={issue.title}
       style={{ minWidth: "400px", width: "50rem" }}
       extra={
-        <Avatar
-          size={32}
-          icon={<img src={issue.user?.avatar_url} alt="avatar" />}
-          onClick={() => window.open(issue.user?.html_url ?? "", "_blank")}
-        />
+        <Tooltip title="Go to Profile" placement="right">
+          <Avatar
+            size={32}
+            icon={<img src={issue.user?.avatar_url} alt="avatar" />}
+            onClick={() => window.open(issue.user?.html_url ?? "", "_blank")}
+          />
+        </Tooltip>
       }
     >
       <p
